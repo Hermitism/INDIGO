@@ -4,14 +4,14 @@
 
 Unlike traditional Query by Committee (QBC) methods which require training multiple models, INDIGO utilizes **embedding features** from the penultimate layer of a single Graph Neural Network (GNN). By calculating the **Mahalanobis Distance**, it measures the dissimilarity between the current atomic structure and the training set to efficiently select high-value samples for First-Principles (DFT) labeling.
 
-## ✨ Key Features
+##  Key Features
 
-*   **🚀 Minimal Computational Overhead**: Only requires training and maintaining a single model. The cost of calculating embedding features and Mahalanobis distance is negligible compared to model inference.
-*   **🔌 High Compatibility**: Compatible with most modern GNN models that feature embeddings and linear output layers (e.g., MACE, Allegro, SevenNet) without architectural changes.
-*   **🎯 Precise Outlier Detection**: Leverages physical information extracted by deep neural networks to accurately capture changes in local atomic environments (e.g., phase transitions, melting).
-*   **📊 Efficient Data Selection**: Achieves screening accuracy on par with mainstream QBC methods and outperforms them on certain OOD samples.
+*   ** Minimal Computational Overhead**: Only requires training and maintaining a single model. The cost of calculating embedding features and Mahalanobis distance is negligible compared to model inference.
+*   ** High Compatibility**: Compatible with most modern GNN models that feature embeddings and linear output layers (e.g., MACE, Allegro, SevenNet) without architectural changes.
+*   ** Precise Outlier Detection**: Leverages physical information extracted by deep neural networks to accurately capture changes in local atomic environments (e.g., phase transitions, melting).
+*   ** Efficient Data Selection**: Achieves screening accuracy on par with mainstream QBC methods and outperforms them on certain OOD samples.
 
-## 🧠 How It Works
+##  How It Works
 
 INDIGO strikes a balance between model-based uncertainty and data distribution analysis:
 
@@ -23,7 +23,7 @@ INDIGO strikes a balance between model-based uncertainty and data distribution a
     *   **Label**: The system calls a DFT calculator (e.g., VASP) for ground truth labels.
     *   **Train**: Once enough new structures (`num_stru_train`) are accumulated, the model is fine-tuned.
 
-## ⚙️ Configuration
+##  Configuration
 
 Key hyperparameters for INDIGO-driven MD simulations:
 
