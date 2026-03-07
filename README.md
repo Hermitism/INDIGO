@@ -3,12 +3,12 @@ INDIGO is an efficient Active Learning strategy designed for Molecular Dynamics 
 
 Unlike traditional Query by Committee (QBC) methods, INDIGO does not require training multiple models. Instead, it utilizes the embedding features from the penultimate layer of a Graph Neural Network (GNN), combined with the Mahalanobis Distance, to measure the dissimilarity between the structure being predicted and the training set. This allows for the efficient selection of high-value samples for First-Principles (DFT) labeling.
 
-✨ Key Features
+
 Minimal Computational Overhead: Unlike QBC, INDIGO only requires training and maintaining a single model. The cost of calculating embedding features and Mahalanobis distance is negligible compared to the model inference itself.
 High Compatibility: It is compatible with most modern GNN models that feature embeddings and a linear output layer (such as MACE, Allegro, SevenNet, etc.) without requiring changes to the model architecture.
 Precise Outlier Detection: By leveraging physical information extracted by deep neural networks, it accurately captures changes in the local atomic environment (e.g., phase transitions, melting).
 Efficient Data Selection: It achieves screening accuracy on par with mainstream QBC methods and even outperforms them when handling certain out-of-distribution samples.
-🧠 Algorithm
+
 The core idea of INDIGO is to strike a balance between classification based on model information and classification based on data distribution.
 
 Feature Extraction: It extracts the network activation values from the layer preceding the energy summation layer (usually the penultimate layer) of the GNN model as embedding features. Information in this layer is highly correlated with the final output and contains rich physical information.
