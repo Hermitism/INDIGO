@@ -11,7 +11,7 @@ Efficient Data Selection: It achieves screening accuracy on par with mainstream 
 
 The core idea of INDIGO is to strike a balance between classification based on model information and classification based on data distribution.
 
-Feature Extraction: It extracts the network activation values from the layer preceding the energy summation layer (usually the penultimate layer) of the GNN model as embedding features. Information in this layer is highly correlated with the final output and contains rich physical information.
+It extracts the network activation values from the layer preceding the energy summation layer (usually the penultimate layer) of the GNN model as embedding features. Information in this layer is highly correlated with the final output and contains rich physical information.
 Dissimilarity Metric: It uses the Mahalanobis Distance to measure the similarity between the atomic environment in the current MD step and the atomic environments in the training set.
 The Mahalanobis Distance normalizes and decorrelates the feature space via the covariance matrix, effectively solving distance metric issues in high-dimensional feature spaces.
 Active Learning Loop:
